@@ -1,5 +1,5 @@
 import api from './api';
-import type { AIPrediction } from '../../../shared/types';
+import type { AIPrediction } from '../types';
 
 /**
  * AI预测服务

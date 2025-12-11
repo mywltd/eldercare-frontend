@@ -1,4 +1,4 @@
-import type { WebSocketMessage } from '../../../shared/types';
+import type { WebSocketMessage } from '../types';
 import { backendConfigManager } from '../utils/backendConfig';
 
 class WebSocketService {

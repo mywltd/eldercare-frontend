@@ -6,7 +6,7 @@ import { dashboardService } from '../../services/dashboardService';
 import { wsService } from '../../services/ws';
 import { useAuthStore } from '../../stores/useAuthStore';
 import { getErrorMessage } from '../../utils/errorHandler';
-import type { CaregiverDashboard, WebSocketMessage } from '../../../../shared/types';
+import type { CaregiverDashboard, WebSocketMessage, DailyRecord } from '../../types';
 
 export default function CaregiverDashboard() {
   const [dashboard, setDashboard] = useState<CaregiverDashboard | null>(null);
@@ -115,7 +115,7 @@ export default function CaregiverDashboard() {
    * 为指定老人准备图表数据
    */
   const getChartDataForElder = (elder: CaregiverDashboard['elders'][0]) => {
-    return elder.recentRecords.map((record) => ({
+    return elder.recentRecords.map((record: DailyRecord) => ({
       date: new Date(record.recordDate).toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' }),
       systolic: record.systolic || 0,
       diastolic: record.diastolic || 0,
@@ -197,7 +197,7 @@ export default function CaregiverDashboard() {
       )}
 
       <Row gutter={[16, 16]}>
-        {dashboard.elders.map((elder) => {
+        {dashboard.elders.map((elder: CaregiverDashboard['elders'][0]) => {
           const isExpanded = expandedElders.has(elder.id);
           const chartData = getChartDataForElder(elder);
           const hasChartData = chartData.length > 0;
@@ -288,7 +288,7 @@ export default function CaregiverDashboard() {
                       <div style={{ marginTop: '12px' }}>
                         <strong>建议:</strong>
                         <ul style={{ marginTop: '8px', paddingLeft: '20px' }}>
-                          {elder.latestReport.recommendations.map((rec, idx) => (
+                          {elder.latestReport.recommendations.map((rec: string, idx: number) => (
                             <li key={idx} style={{ fontSize: '12px' }}>
                               {rec}
                             </li>

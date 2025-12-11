@@ -1,5 +1,5 @@
 import api from './api';
-import type { DynamicFieldConfig } from '../../../shared/types';
+import type { DynamicFieldConfig } from '../types';
 
 /**
  * 动态字段服务

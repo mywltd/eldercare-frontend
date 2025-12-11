@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Form, Input, Button, message, Tabs, Checkbox } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { UserOutlined, LockOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
-import { Role } from '../../../../shared/types';
+import { Role } from '../../types';
 import { authService } from '../../services/authService';
 import { useAuthStore } from '../../stores/useAuthStore';
 import { getErrorMessage } from '../../utils/errorHandler';

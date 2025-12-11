@@ -1,5 +1,5 @@
 import api from './api';
-import type { ApiResponse, CreateRecordRequest, RiskReport } from '../../../shared/types';
+import type { ApiResponse, CreateRecordRequest, RiskReport } from '../types';
 
 /**
  * 老人服务层

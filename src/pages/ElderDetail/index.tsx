@@ -49,7 +49,7 @@ import { medicalHistoryService } from '../../services/medicalHistoryService';
 import { useMobile } from '../../hooks/useMobile';
 import { useAuthStore } from '../../stores/useAuthStore';
 import { getErrorMessage } from '../../utils/errorHandler';
-import type { MedicalHistory } from '../../../../shared/types';
+import type { MedicalHistory } from '../../types';
 import dayjs from 'dayjs';
 import './elder-detail.css';
 

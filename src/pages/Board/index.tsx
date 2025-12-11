@@ -19,7 +19,7 @@ import { dashboardService } from '../../services/dashboardService';
 import { wsService } from '../../services/ws';
 import { useAuthStore } from '../../stores/useAuthStore';
 import { getErrorMessage } from '../../utils/errorHandler';
-import type { WebSocketMessage } from '../../../../shared/types';
+import type { WebSocketMessage } from '../../types';
 
 interface OverviewData {
   summary: {

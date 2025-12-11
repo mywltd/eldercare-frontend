@@ -1,5 +1,5 @@
 import api from './api';
-import type { ApiResponse, CaregiverDashboard } from '../../../shared/types';
+import type { ApiResponse, CaregiverDashboard } from '../types';
 
 /**
  * 仪表盘服务层

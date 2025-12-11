@@ -1,5 +1,5 @@
 import api from './api';
-import type { RegisterRequest, User, ApiResponse } from '../../../shared/types';
+import type { RegisterRequest, User, ApiResponse } from '../types';
 
 /**
  * 认证服务层

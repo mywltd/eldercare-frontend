@@ -22,7 +22,7 @@ import type {
   CreateRecordRequest,
   RiskReport,
   RiskLevel,
-} from '../../../../shared/types';
+} from '../../types';
 
 const { Title, Text } = Typography;
 
@@ -512,7 +512,7 @@ export default function ElderInputPage() {
                     margin: 0,
                   }}
                 >
-                  {riskReport.recommendations.slice(0, 3).map((rec, index) => (
+                  {riskReport.recommendations.slice(0, 3).map((rec: string, index: number) => (
                     <li key={index} style={{ marginBottom: '8px' }}>
                       {rec}
                     </li>

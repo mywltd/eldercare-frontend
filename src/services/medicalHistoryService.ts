@@ -1,5 +1,5 @@
 import api from './api';
-import type { MedicalHistory } from '../../../shared/types';
+import type { MedicalHistory } from '../types';
 
 /**
  * 病史信息服务
