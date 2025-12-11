@@ -1,0 +1,29 @@
+{
+  "backends": [
+    {
+      "name": "生产服务器1",
+      "apiUrl": "https://health.o3o3o.cn",
+      "wsUrl": "wss://health.o3o3o.cn",
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "生产服务器2",
+      "apiUrl": "https://health.o3o3o.com",
+      "wsUrl": "wss://health.o3o3o.com",
+      "priority": 2,
+      "enabled": true
+    },
+    {
+      "name": "本地开发",
+      "apiUrl": "http://192.168.1.100:3000",
+      "wsUrl": "ws://192.168.1.100:3000",
+      "priority": 2,
+      "enabled": false
+    }
+  ],
+  "healthCheckEndpoint": "/health",
+  "healthCheckTimeout": 3000,
+  "autoSelect": true
+}
+

@@ -1,0 +1,169 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-attachment: fixed;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(24, 144, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(82, 196, 26, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(114, 46, 209, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 32px 0 rgba(24, 144, 255, 0.15);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-card:hover {
+  box-shadow: 0 12px 48px 0 rgba(24, 144, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.login-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.login-title-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+.login-button {
+  border-radius: 12px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(24, 144, 255, 0.4);
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+}
+
+.login-test-accounts {
+  margin-top: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.test-accounts-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.test-account-item {
+  margin-bottom: 12px;
+}
+
+.test-account-item:last-child {
+  margin-bottom: 0;
+}
+
+.test-account-role {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.test-account-item p {
+  color: #666;
+  margin: 2px 0;
+}
+
+/* 确保表单标签可见 */
+.login-card .ant-form-item-label > label {
+  color: #333 !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.login-card .ant-card-head-title {
+  padding: 24px 0 16px 0;
+}
+
+.login-card .ant-card-body {
+  padding: 24px;
+}
+
+/* 确保输入框可见 */
+.login-card .ant-input,
+.login-card .ant-input-password {
+  background: rgba(255, 255, 255, 0.8) !important;
+  color: #333 !important;
+  border: 1px solid rgba(24, 144, 255, 0.2) !important;
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-card .ant-input:hover,
+.login-card .ant-input-password:hover {
+  border-color: rgba(24, 144, 255, 0.4) !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+}
+
+.login-card .ant-input:focus,
+.login-card .ant-input-password:focus,
+.login-card .ant-input-focused,
+.login-card .ant-input-password-focused {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+.login-card .ant-input::placeholder,
+.login-card .ant-input-password::placeholder {
+  color: #999 !important;
+}
+
